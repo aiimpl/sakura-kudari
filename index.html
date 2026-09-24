@@ -1,10 +1,10 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>桜川くだり</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
-  rel="stylesheet"
-/>
+<link rel="stylesheet" href="./fonts/fonts.css" />
 <style>
   :root {
     color-scheme: dark;
@@ -226,6 +226,8 @@
   }
 </style>
 
+</head>
+<body>
 <canvas id="gl" tabindex="0"></canvas>
 <div class="hud" id="title">
   <div class="t">桜川くだり</div>
@@ -261,8 +263,8 @@
 <script type="importmap">
   {
     "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      "three": "./vendor/three/build/three.module.js",
+      "three/addons/": "./vendor/three/examples/jsm/"
     }
   }
 </script>
@@ -4173,28 +4175,7 @@
     canvas.focus();
   });
   frame();
-  window.__g = {
-    boatState,
-    setWeather,
-    weather,
-    get cine() {
-      return cine;
-    },
-    set cine(v) {
-      cine = v;
-    },
-    start: () => go.click(),
-    cam: {
-      set yaw(v) {
-        camYaw = v;
-        userT = 99;
-      },
-      set pitch(v) {
-        camPitch = v;
-      },
-      set dist(v) {
-        camDistT = v;
-      },
-    },
-  };
+
 </script>
+</body>
+</html>
